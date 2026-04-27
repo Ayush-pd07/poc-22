@@ -3,12 +3,12 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ec2-user/app
+    destination: /home/ubuntu/app
 
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
-      runas: ec2-user
+      runas: ubuntu
   ApplicationStart:
     - location: scripts/start_server.sh
-      runas: ec2-user
+      runas: ubuntu
